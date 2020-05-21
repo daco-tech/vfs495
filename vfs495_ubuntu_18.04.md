@@ -1,4 +1,4 @@
-# Validity VFS495 (138a:003f) driver and utilities for Ubuntu 18.04/18.10
+# Validity VFS495 (138a:003f) driver and utilities for Ubuntu/PopOS 18.04/18.10/20.04
 
 ### (almost) Auto setup
 
@@ -40,8 +40,15 @@ Coming soon
 
 9. Enroll a finger using fprint_demo with `sudo fprint_demo`
 
-10. Reboot
+10. Create the temporary service file and grant full permissions
+*  `sudo touch /tmp/vcsSemKey_ServiceId`
+*  `sudo chmod 777 /tmp/vcsSemKey_ServiceId`
 
-11. In the log-in screen press Enter and scan your finger. Press Enter once again to log-in (or to rescan your finger).
+11. Enable fingerprint
+*  `sudo pam-auth-update`
+
+12. Reboot
+
+13. In the log-in screen press Enter and scan your finger. Press Enter once again to log-in (or to rescan your finger).
 * For GNOME Shell press Enter, in the password input prompt type any character, press Enter again and scan your finger. 
 * For XFCE press two times the log-in button and scan your finger.
